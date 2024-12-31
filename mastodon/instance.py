@@ -123,7 +123,7 @@ class Mastodon(Internals):
         return self.__api_request('GET', '/api/v1/instance/rules')
 
     @api_version("4.2.0", "4.2.0", "4.2.0")
-    def instance_languages(self) -> NonPaginatableList[dict]:
+    def instance_languages(self) -> NonPaginatableList[AttribAccessDict]:
         """
         Retrieve instance supported languages.
         """
