@@ -122,6 +122,13 @@ class Mastodon(Internals):
         """
         return self.__api_request('GET', '/api/v1/instance/rules')
 
+    @api_version("4.2.0", "4.2.0", "4.2.0")
+    def instance_languages(self) -> NonPaginatableList[dict]:
+        """
+        Retrieve instance supported languages.
+        """
+        return self.__api_request('GET', '/api/v1/instance/languages')
+
     ###
     # Reading data: Directory
     ###
